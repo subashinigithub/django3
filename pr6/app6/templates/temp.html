@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'temp.css' %}">
+</head>
+<body>
+    <h4>Welcome to our new site</h4>
+    <a href="{% url 'pg2' %}">pg2</a>
+    <a href="{% url 'pg3' %}">fryt</a>
+    {% for x in a %}
+        <div>
+            <img src="{% static 'images/img1.jpg' %}" alt="{{ x }}",width="150px" height="200px ">
+            <p>{{ x }}</p>
+        </div>
+      
+    {% endfor %}
+    {% if b is 1 %}
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere labore ea dolore ullam officia accusamus obcaecati, ad odio ipsam quis deleniti a ab exercitationem consectetur quisquam, totam, adipisci doloribus? Dolores.</p>
+    {% endif %}
+</body>
+</html>

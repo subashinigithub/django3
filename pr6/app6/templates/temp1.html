@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'temp.css' %}">
+</head>
+<body>
+    <h4>Welcome to our first site</h4>
+    {% for x in info %}
+    <p>{{x.id}} - {{x.title}}
+        {% for a in x.reviews%}
+        - {{a.rating}} 
+        {% endfor %}
+
+
+    </p>
+   
+    {% endfor %}
+    
+</body>
+</html>

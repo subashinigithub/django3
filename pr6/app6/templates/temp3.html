@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'temp.css' %}">
+</head>
+<body>
+
+    <h3>welcome to all</h3>
+    <h4>This is our Third site</h4>
+    <a href="{% url 'pg5' %}">train location</a>
+    <p>train_name: {{ data.train_name }}</p>
+   <p>success: {{ data.success }}</p> 
+   <p>Message: {{ data.message }}</p> 
+   <p>updated_time: {{ data.updated_time }}</p> 
+<table border="2">
+        <tr>
+            <th>is curent station</th>
+            <th>Station name</th>
+            <th>distance</th>
+            <th>Timing</th>
+            <th>Delay</th>
+            <th>platform no</th>
+            <th>halt</th>
+        </tr>
+        {% for x in info %}
+        <tr>
+                <td>{{x.is_current_station}}</td> 
+                <td>{{x.station_name}}</td> 
+                <td>{{x.distance}}</td>
+                <td>{{x.timing}}</td>
+                <td>{{x.delay}}</td>
+                <td>{{x.platform}}</td>
+                <td>{{x.halt}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
